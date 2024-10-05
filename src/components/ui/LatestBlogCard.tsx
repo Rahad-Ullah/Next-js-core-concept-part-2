@@ -1,9 +1,10 @@
+import { IBlog } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillLike } from "react-icons/ai";
 import { FaCalendar } from "react-icons/fa";
 
-const LatestBlogCard = ({ blog }) => {
+const LatestBlogCard = ({ blog }: { blog: IBlog }) => {
   return (
     <div key={blog.id} className="card w-full bg-base-100 shadow-xl">
       <figure>
@@ -37,6 +38,7 @@ const LatestBlogCard = ({ blog }) => {
                 width={100}
                 height={100}
                 alt="author image"
+                className="object-cover"
               />
             </div>
             <span>{blog.author_name}</span>
